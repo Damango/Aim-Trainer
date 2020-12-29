@@ -1,0 +1,11 @@
+.aim-trainer-container{
+    position: relative;
+ top: 50px;
+    width: 1000px;
+    height: 80vh;
+    left: 50%;
+   
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid black;
+}
