@@ -1,17 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSpring, animated } from 'react-spring'
 import "./ClickBlock.css"
 const ClickBlock = (props) => {
 
-    let randomNumber = Math.floor(Math.random() * 400);
-    let width = randomNumber
-    let height = randomNumber * 2;
+    let blockStyle = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } })
+
+
+
+
+
 
     let theStyle = {
-        marginRight: width,
-        marginLeft: height
+        top: props.MR,
+        left: props.ML
     }
 
-    return (<div className="click-block-container" style={theStyle}> </div>);
+
+
+
+
+
+
+    function clearsBlock() {
+
+
+
+        props.clearBlock(props.block);
+
+
+    }
+
+
+    return (<div className="click-block-container" style={theStyle} onClick={() => { clearsBlock() }}>
+        <animated.div className='click-block' style={blockStyle}></animated.div>
+    </div>);
+
+
+
+
+
 }
+
+
+
+
 
 export default ClickBlock;

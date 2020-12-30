@@ -1,6 +1,31 @@
 .click-block-container{
+    position: absolute;
+    background-color: transparent;
+    width: 75px;
+    height: 75px;
+  
+}
+
+.clock-block-container:hover{
+    cursor: pointer;
+}
+
+.click-block{
+    position: absolute;
+    background-color: #353b48;
+  width: 75px;
+    height: 75px;
+  
+   
+}
+
+.click-block:hover{
+    cursor: pointer;
+}
+
+.clicked-cover{
     position: relative;
-    background-color: black;
-    width: 25px;
-    height: 25px;
+    width: 100%;
+    height: 100%;
+    background-color: green;
 }
